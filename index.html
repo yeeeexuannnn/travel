@@ -128,6 +128,10 @@
     }
 
     /* 通用繪本卡片 */
+    section[id] {
+      scroll-margin-top: 76px;
+    }
+
     .card {
       background-color: var(--bg-card);
       border: var(--border-w) solid var(--ink);
@@ -2104,10 +2108,19 @@
       });
     });
 
-    // 3. 頂端選單點擊高亮
+    // 3. 頂端選單點擊高亮與平滑捲動（防止 htmlpreview <base> 標籤造成跳轉壞掉）
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          const targetEl = document.querySelector(href);
+          if (targetEl) {
+            const isReduced = document.body.classList.contains('reduce-motion') || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            targetEl.scrollIntoView({ behavior: isReduced ? 'auto' : 'smooth', block: 'start' });
+          }
+        }
         navLinks.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
       });

@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🇯🇵 東京五天四夜自由行｜2026/12/01–12/05</title>
+  <!-- Google Fonts: Huninn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Huninn&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-washi: #FFFCF6;
+      --bg-card: #FFFFFF;
+      --bg-soft: #F7F2E7;
+      --ink: #3E3A39;
+      --ink-muted: #6E6765;
+      --coral: #F2A497;
+      --coral-light: #FCE8E4;
+      --yellow: #F6D27A;
+      --yellow-light: #FDF3D7;
+      --aqua: #A8D3E6;
+      --aqua-light: #E6F3F8;
+      --green: #B9DAA5;
+      --green-light: #EBF5E4;
+      --border-w: 3px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --radius-pill: 999px;
+      --shadow: 0 4px 0 #3E3A39;
+      --shadow-sm: 0 3px 0 #3E3A39;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 76px;
+    }
+
+    body {
+      background-color: var(--bg-washi);
+      color: var(--ink);
+      font-family: 'Huninn', 'jf-openhuninn-2.0', 'Zen Maru Gothic', -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.65;
+      font-size: 16px;
+      padding-bottom: 60px;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+      font-weight: 700;
+    }
+
+    a:hover {
+      background-color: var(--yellow);
+    }
+
+    /* 頂端固定選單 */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--bg-washi);
+      border-bottom: var(--border-w) solid var(--ink);
+      padding: 10px 12px;
+    }
+
+    .nav-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-bottom: 2px;
+    }
+
+    .nav-inner::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-link {
+      flex-shrink: 0;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--ink);
+      background-color: var(--bg-card);
+      border: 2.5px solid var(--ink);
+      border-radius: var(--radius-pill);
+      padding: 6px 13px;
+      box-shadow: 0 2px 0 var(--ink);
+      transition: transform 0.15s ease, background-color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .nav-link:hover,
+    .nav-link:active,
+    .nav-link.active {
+      background-color: var(--yellow);
+      transform: translateY(1px);
+    }
+
+    .nav-link[data-color="coral"].active { background-color: var(--coral); }
+    .nav-link[data-color="aqua"].active { background-color: var(--aqua); }
+    .nav-link[data-color="green"].active { background-color: var(--green); }
+
+    /* 主容器（手機優先，最大寬度適配平板與桌面） */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 18px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    /* 通用繪本卡片 */
+    .card {
+      background-color: var(--bg-card);
+      border: var(--border-w) solid var(--ink);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 20px 18px;
+      position: relative;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      border: var(--border-w) solid var(--ink);
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 2px 0 var(--ink);
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    /* 首頁 Hero 區塊 */
+    .hero-card {
+      background-color: var(--aqua-light);
+      border: var(--border-w) solid var(--ink);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 22px 18px 20px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background-color: var(--yellow);
+      border: 2.5px solid var(--ink);
+      border-radius: var(--radius-pill);
+      padding: 4px 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      box-shadow: 0 2px 0 var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .hero-title {
+      font-size: 1.55rem;
+      line-height: 1.35;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      margin-bottom: 14px;
+    }
+
+    .hero-svg-wrap {
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto 16px;
+      background-color: var(--bg-washi);
+      border: var(--border-w) solid var(--ink);
+      border-radius: var(--radius-md);
+      padding: 10px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-svg-wrap svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* 倒數計時器 */
+    .countdown-box {
+      background-color: var(--bg-washi);
+      border: var(--border-w) solid var(--ink);
+      border-radius: var(--radius-md);
+      padding: 14px 12px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .countdown-label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .cd-item {
+      border: 2.5px solid var(--ink);
+      border-radius: var(--radius-sm);
+      padding: 8px 4px;
+      box-shadow: 0 2px 0 var(--ink);
+    }
+
+    .cd-item:nth-child(1) { background-color: var(--coral); }
+    .cd-item:nth-child(2) { background-color: var(--yellow); }
+    .cd-item:nth-child(3) { background-color: var(--aqua); }
+    .cd-item:nth-child(4) { background-color: var(--green); }
+
+    .cd-num {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+      display: block;
+    }
+
+    .cd-unit {
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    /* 航班與住宿區塊 */
+    .flight-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    @media (min-width: 600px) {
+      .flight-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .flight-card {
+      border: var(--border-w) solid var(--ink);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      background-color: var(--bg-washi);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .flight-tag {
+      display: inline-block;
+      border: 2.5px solid var(--ink);
+      border-radius: var(--radius-pill);
+      padding: 3px 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .flight-code {
+      float: right;
+      background-color: var(--bg-card);
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      padding: 2px 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .flight-route {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .flight-station {
+      flex: 1;
+    }
+
+    .flight-time {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .flight-airport {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+    }
+
+    .flight-arrow {
+      flex-shrink: 0;
+      width: 44px;
+      text-align: center;
+    }
+
+    /* 住宿卡片 */
+    .hotel-box {
+      margin-top: 14px;
+      background-color: var(--yellow-light);
+      border: var(--border-w) solid var(--ink);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .hotel-info h3 {
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+    }
+
+    .hotel-station-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--green);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-pill);
+      padding: 4px 12px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    /* 每日行程切換 Tabs */
+    .day-tabs {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+
+    .day-tab {
+      appearance: none;
+      font-family: inherit;
+      background-color: var(--bg-washi);
+      color: var(--ink);
+      border: var(--border-w) solid var(--ink);
+      border-radius: var(--radius-md);
+      padding: 8px 4px;
+      cursor: pointer;
+      box-shadow: 0 3px 0 var(--ink);
+      text-align: center;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    .day-tab:hover {
+      background-color: var(--yellow-light);
+    }
+
+    .day-tab.active {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 var(--ink);
+    }
+
+    .day-tab[data-day="1"].active { background-color: var(--coral); }
+    .day-tab[data-day="2"].active { background-color: var(--yellow); }
+    .day-tab[data-day="3"].active { background-color: var(--aqua); }
+    .day-tab[data-day="4"].active { background-color: var(--green); }
+    .day-tab[data-day="5"].active { background-color: var(--coral); }
+
+    .tab-dnum {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .tab-date {
+      display: block;
+      font-size: 0.75rem;
+    }
+
+    /* 每日面板 */
+    .day-panel {
+      display: none;
+    }
+
+    .day-panel.active {
+      display: block;
+      animation: bounceIn 0.42s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: translateY(14px) scale(0.97);
+      }
+      65% {
+        opacity: 1;
+        transform: translateY(-4px) scale(1.01);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .day-banner {
+      border: var(--border-w) solid var(--ink);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @media (min-width: 560px) {
+      .day-banner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .day-banner-text h3 {
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+
+    .day-banner-text p {
+      font-size: 0.92rem;
+      color: var(--ink);
+    }
+
+    .day-banner-svg {
+      width: 120px;
+      height: 90px;
+      flex-shrink: 0;
+      align-self: center;
+      background-color: var(--bg-washi);
+      border: 2.5px solid var(--ink);
+      border-radius: var(--radius-sm);
+      padding: 6px;
+    }
+
+    .day-banner-svg svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* 時間軸 */
+    .timeline {
+      position: relative;
+      padding-left: 26px;
+      margin-bottom: 20px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 9px;
+      top: 12px;
+      bottom: 12px;
+      width: 3px;
+      background-color: var(--ink);
+    }
+
+    .tl-item {
+      position: relative;
+      background-color: var(--bg-washi);
+      border: var(--border-w) solid var(--ink);
+      border-radius: var(--radius-md);
+      padding: 13px 15px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -25px;
+      top: 18px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: var(--yellow);
+      border: 3px solid var(--ink);
+    }
+
+    .tl-item.must-go::before {
+      background-color: var(--coral);
+    }
+
+    .tl-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .tl-time {
+      background-color: var(--ink);
+      color: var(--bg-washi);
+      border-radius: var(--radius-pill);
+      padding: 2px 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    /* 標籤小徽章 */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-pill);
+      padding: 2px 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .badge-must {
+      background-color: var(--coral);
+      box-shadow: 0 2px 0 var(--ink);
+    }
+
+    .badge-opt {
+      background-color: var(--yellow);
+    }
+
+    .badge-transport {
+      background-color: var(--aqua);
+    }
+
+    .badge-jr {
+      background-color: var(--green);
+    }
+
+    .badge-bus {
+      background-color: var(--yellow);
+    }
+
+    .tl-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .tl-desc {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      margin-top: 4px;
+    }
+
+    .tl-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    /* 附屬資訊區塊（交通、必逛景點、注意事項） */
+    .sub-box {
+      border: var(--border-w) solid var(--ink);
+      border-radius: var(--radius-md);
+      padding: 15px;
+      margin-top: 14px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .sub-box.aqua { background-color: var(--aqua-light); }
+    .sub-box.yellow { background-color: var(--yellow-light); }
+    .sub-box.coral { background-color: var(--coral-light); }
+    .sub-box.green { background-color: var(--green-light); }
+
+    .sub-box h4 {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sub-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.92rem;
+    }
+
+    .sub-list li {
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .sub-list li::before {
+      content: '●';
+      position: absolute;
+      left: 0;
+      color: var(--ink);
+      font-size: 0.75rem;
+      top: 2px;
+    }
+
+    .spot-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    @media (min-width: 560px) {
+      .spot-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .spot-card {
+      background-color: var(--bg-washi);
+      border: 2.5px solid var(--ink);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+    }
+
+    .spot-card h5 {
+      font-size: 0.98rem;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+
+    .spot-card p {
+      font-size: 0.86rem;
+      color: var(--ink-muted);
+    }
+
+    /* 交通費總整理表格 */
+    .fare-table-wrap {
+      overflow-x: auto;
+      border: var(--border-w) solid var(--ink);
+      border-radius: var(--radius-md);
+      background-color: var(--bg-washi);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 14px;
+    }
+
+    table.fare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .fare-table th,
+    .fare-table td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .fare-table th {
+      background-color: var(--aqua);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .fare-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .fare-totals {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: 560px) {
+      .fare-totals {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .fare-pill-card {
+      border: 2.5px solid var(--ink);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 2px 0 var(--ink);
+    }
+
+    .fare-pill-card .price {
+      font-size: 1.35rem;
+      font-weight: 700;
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* 可打勾清單（出發前清單、待辦清單、行李清單） */
+    .checklist-progress {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+      background-color: var(--bg-washi);
+      border: 2.5px solid var(--ink);
+      border-radius: var(--radius-pill);
+      padding: 6px 14px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .progress-bar-outer {
+      flex: 1;
+      height: 12px;
+      background-color: var(--bg-soft);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-pill);
+      overflow: hidden;
+    }
+
+    .progress-bar-inner {
+      height: 100%;
+      background-color: var(--green);
+      width: 0%;
+      transition: width 0.25s ease;
+    }
+
+    .check-group-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 14px 0 8px;
+      display: inline-block;
+      padding: 3px 12px;
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-pill);
+    }
+
+    .check-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background-color: var(--bg-washi);
+      border: 2.5px solid var(--ink);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.15s ease, transform 0.1s ease;
+    }
+
+    .check-item:active {
+      transform: scale(0.99);
+    }
+
+    .check-item input[type="checkbox"] {
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border: 2.5px solid var(--ink);
+      border-radius: 7px;
+      background-color: var(--bg-card);
+      flex-shrink: 0;
+      margin-top: 2px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .check-item input[type="checkbox"]:checked {
+      background-color: var(--green);
+    }
+
+    .check-item input[type="checkbox"]:checked::after {
+      content: '✓';
+      font-size: 15px;
+      font-weight: 900;
+      color: var(--ink);
+    }
+
+    .check-item.checked {
+      background-color: var(--bg-soft);
+    }
+
+    .check-item.checked .check-text {
+      text-decoration: line-through;
+      color: var(--ink-muted);
+    }
+
+    .check-add-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .check-input {
+      flex: 1;
+      font-family: inherit;
+      font-size: 0.92rem;
+      padding: 8px 12px;
+      border: 2.5px solid var(--ink);
+      border-radius: var(--radius-sm);
+      background-color: var(--bg-washi);
+      color: var(--ink);
+    }
+
+    .btn-cute {
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 700;
+      background-color: var(--yellow);
+      color: var(--ink);
+      border: 2.5px solid var(--ink);
+      border-radius: var(--radius-sm);
+      padding: 8px 14px;
+      cursor: pointer;
+      box-shadow: 0 2px 0 var(--ink);
+      white-space: nowrap;
+    }
+
+    .btn-cute:active {
+      transform: translateY(2px);
+      box-shadow: none;
+    }
+
+    /* 插圖輕微動態效果 */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+
+    @keyframes swayLeaf {
+      0%, 100% { transform: rotate(-5deg) translateY(0); }
+      50% { transform: rotate(6deg) translateY(-3px); }
+    }
+
+    @keyframes trainRun {
+      0%, 100% { transform: translateX(0px); }
+      50% { transform: translateX(6px); }
+    }
+
+    @keyframes spinWheel {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes twinkle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.18); }
+    }
+
+    .anim-float {
+      animation: floatSlow 3.4s ease-in-out infinite;
+    }
+
+    .anim-sway {
+      transform-origin: center;
+      transform-box: fill-box;
+      animation: swayLeaf 2.8s ease-in-out infinite;
+    }
+
+    .anim-train {
+      animation: trainRun 2.6s ease-in-out infinite;
+    }
+
+    .anim-wheel {
+      transform-origin: center;
+      transform-box: fill-box;
+      animation: spinWheel 18s linear infinite;
+    }
+
+    .anim-twinkle {
+      transform-origin: center;
+      transform-box: fill-box;
+      animation: twinkle 2.2s ease-in-out infinite;
+    }
+
+    /* 支援「減少動態效果」系統設定與手動開關 */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+    body.reduce-motion *,
+    body.reduce-motion *::before,
+    body.reduce-motion *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 頂端固定選單 -->
+  <nav class="top-nav" aria-label="主選單">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-link active" data-color="yellow">🗾 首頁倒數</a>
+      <a href="#flight-hotel" class="nav-link" data-color="coral">✈️ 航班＆住宿</a>
+      <a href="#itinerary" class="nav-link" data-color="aqua">🗓️ 每日行程</a>
+      <a href="#budget" class="nav-link" data-color="green">💰 交通預算</a>
+      <a href="#todo-pre" class="nav-link" data-color="coral">✅ 出發前＆待辦</a>
+      <a href="#packing" class="nav-link" data-color="yellow">🧳 行李清單</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- 首頁插圖＋標題＋出發倒數 -->
+    <section id="hero" class="hero-card">
+      <span class="hero-badge">繪本旅遊手冊・5 Days 4 Nights</span>
+      <h1 class="hero-title">🇯🇵 東京五天四夜自由行</h1>
+      <p class="hero-subtitle">2026/12/01（二）– 12/05（六）｜大塚・新宿・橫濱・富士山</p>
+
+      <!-- 手繪日系繪本風主題插圖（富士山、五重塔、銀杏、橫濱摩天輪、Skyliner、飛機） -->
+      <div class="hero-svg-wrap" aria-hidden="true">
+        <svg viewBox="0 0 500 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- 背景天空色塊 -->
+          <rect x="6" y="6" width="488" height="208" rx="14" fill="#A8D3E6" stroke="#3E3A39" stroke-width="3"/>
+          <!-- 太陽 -->
+          <circle cx="82" cy="54" r="24" fill="#F2A497" stroke="#3E3A39" stroke-width="3" class="anim-twinkle"/>
+          <!-- 雲朵 -->
+          <g class="anim-float">
+            <path d="M135 55 C135 45 148 42 154 49 C160 40 176 42 178 52 C186 52 190 62 182 67 L136 67 C128 67 127 56 135 55 Z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+          </g>
+          <g class="anim-float" style="animation-delay: -1.5s;">
+            <path d="M365 44 C365 35 377 32 383 39 C389 31 404 33 406 42 C414 42 418 52 410 56 L366 56 C358 56 357 45 365 44 Z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+          </g>
+
+          <!-- 橫濱摩天輪（左側） -->
+          <g transform="translate(88, 128)">
+            <g class="anim-wheel">
+              <circle cx="0" cy="0" r="36" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3"/>
+              <circle cx="0" cy="0" r="24" fill="#F6D27A" stroke="#3E3A39" stroke-width="2.5"/>
+              <line x1="-36" y1="0" x2="36" y2="0" stroke="#3E3A39" stroke-width="2.5"/>
+              <line x1="0" y1="-36" x2="0" y2="36" stroke="#3E3A39" stroke-width="2.5"/>
+              <line x1="-25" y1="-25" x2="25" y2="25" stroke="#3E3A39" stroke-width="2.5"/>
+              <line x1="25" y1="-25" x2="-25" y2="25" stroke="#3E3A39" stroke-width="2.5"/>
+              <circle cx="0" cy="-36" r="5" fill="#F2A497" stroke="#3E3A39" stroke-width="2.5"/>
+              <circle cx="36" cy="0" r="5" fill="#B9DAA5" stroke="#3E3A39" stroke-width="2.5"/>
+              <circle cx="0" cy="36" r="5" fill="#F2A497" stroke="#3E3A39" stroke-width="2.5"/>
+              <circle cx="-36" cy="0" r="5" fill="#B9DAA5" stroke="#3E3A39" stroke-width="2.5"/>
+            </g>
+            <path d="M-18 46 L0 0 L18 46" stroke="#3E3A39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="0" cy="0" r="6" fill="#F2A497" stroke="#3E3A39" stroke-width="3"/>
+          </g>
+
+          <!-- 富士山（中央主視覺） -->
+          <path d="M145 174 L218 68 C223 61 232 61 238 61 L262 61 C268 61 277 61 282 68 L355 174 Z" fill="#A8D3E6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M152 174 L220 70 L280 70 L348 174 Z" fill="#3E3A39" fill-opacity="0.08"/>
+          <!-- 富士山白雪冠 -->
+          <path d="M220 68 L280 68 L302 102 L285 95 L272 108 L256 94 L242 108 L228 95 L214 106 L198 102 Z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+
+          <!-- 新倉山淺間公園五重塔（右側） -->
+          <g transform="translate(378, 86)">
+            <rect x="16" y="58" width="28" height="30" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3"/>
+            <path d="M6 58 L54 58 L46 48 L14 48 Z" fill="#F2A497" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M10 46 L50 46 L43 36 L17 36 Z" fill="#F2A497" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M14 34 L46 34 L40 24 L20 24 Z" fill="#F2A497" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+            <line x1="30" y1="10" x2="30" y2="24" stroke="#3E3A39" stroke-width="3" stroke-linecap="round"/>
+          </g>
+
+          <!-- 銀杏樹（左右點綴） -->
+          <g class="anim-sway" transform="translate(30, 128)">
+            <rect x="13" y="28" width="8" height="20" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3"/>
+            <circle cx="17" cy="18" r="18" fill="#F6D27A" stroke="#3E3A39" stroke-width="3"/>
+            <circle cx="27" cy="24" r="12" fill="#F6D27A" stroke="#3E3A39" stroke-width="3"/>
+          </g>
+          <g class="anim-sway" style="animation-delay: -1.2s;" transform="translate(432, 126)">
+            <rect x="13" y="28" width="8" height="22" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3"/>
+            <circle cx="17" cy="18" r="17" fill="#F6D27A" stroke="#3E3A39" stroke-width="3"/>
+          </g>
+
+          <!-- 草地與鐵道底層 -->
+          <rect x="6" y="172" width="488" height="42" rx="10" fill="#B9DAA5" stroke="#3E3A39" stroke-width="3"/>
+
+          <!-- 京成 Skyliner 列車在鐵道上奔馳 -->
+          <g class="anim-train" transform="translate(155, 154)">
+            <path d="M0 24 L18 4 L175 4 C183 4 188 10 188 18 L188 24 Z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+            <rect x="16" y="16" width="172" height="6" fill="#A8D3E6" stroke="#3E3A39" stroke-width="2.5"/>
+            <rect x="32" y="8" width="18" height="7" rx="2" fill="#F6D27A" stroke="#3E3A39" stroke-width="2.5"/>
+            <rect x="58" y="8" width="18" height="7" rx="2" fill="#F6D27A" stroke="#3E3A39" stroke-width="2.5"/>
+            <rect x="84" y="8" width="18" height="7" rx="2" fill="#F6D27A" stroke="#3E3A39" stroke-width="2.5"/>
+            <rect x="110" y="8" width="18" height="7" rx="2" fill="#F6D27A" stroke="#3E3A39" stroke-width="2.5"/>
+            <rect x="136" y="8" width="18" height="7" rx="2" fill="#F6D27A" stroke="#3E3A39" stroke-width="2.5"/>
+            <circle cx="34" cy="26" r="5" fill="#3E3A39"/>
+            <circle cx="74" cy="26" r="5" fill="#3E3A39"/>
+            <circle cx="124" cy="26" r="5" fill="#3E3A39"/>
+            <circle cx="164" cy="26" r="5" fill="#3E3A39"/>
+          </g>
+
+          <!-- 天空小飛機 -->
+          <g class="anim-float" transform="translate(260, 22)">
+            <path d="M0 16 L46 8 C52 7 56 12 52 16 L34 22 L22 34 L16 34 L21 23 L8 24 L3 29 L0 28 Z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.8" stroke-linejoin="round"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- 出發倒數計時器 -->
+      <div class="countdown-box" aria-live="polite">
+        <div class="countdown-label">
+          <span>⏳ 距離 2026/12/01 08:05 起飛還有</span>
+        </div>
+        <div class="countdown-grid" id="countdown-grid">
+          <div class="cd-item">
+            <span class="cd-num" id="cd-days">--</span>
+            <span class="cd-unit">天</span>
+          </div>
+          <div class="cd-item">
+            <span class="cd-num" id="cd-hours">--</span>
+            <span class="cd-unit">小時</span>
+          </div>
+          <div class="cd-item">
+            <span class="cd-num" id="cd-mins">--</span>
+            <span class="cd-unit">分鐘</span>
+          </div>
+          <div class="cd-item">
+            <span class="cd-num" id="cd-secs">--</span>
+            <span class="cd-unit">秒</span>
+          </div>
+        </div>
+        <p id="cd-status" style="font-size: 0.84rem; margin-top: 8px; color: var(--ink-muted);">
+          行程原則：第一天及富士山一日遊當晚都保留彈性，不為了跑景點而讓旅程太累 ✨
+        </p>
+      </div>
+    </section>
+
+    <!-- 航班卡片 ＆ 住宿資訊 -->
+    <section id="flight-hotel" class="card">
+      <div class="section-header">
+        <span class="section-icon" style="background-color: var(--coral);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M2 16L21 7L17 20L11 15L7 18V14L2 16Z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <h2 class="section-title">✈️ 航班卡片 ＆ 🏨 住宿資訊</h2>
+      </div>
+
+      <div class="flight-grid">
+        <!-- 去程 -->
+        <div class="flight-card">
+          <span class="flight-code">FD234</span>
+          <span class="flight-tag" style="background-color: var(--coral);">去程｜12/01（二）</span>
+          <div class="flight-route">
+            <div class="flight-station">
+              <div class="flight-time">08:05</div>
+              <div class="flight-airport">高雄小港機場起飛</div>
+            </div>
+            <div class="flight-arrow" aria-hidden="true">
+              <svg width="42" height="20" viewBox="0 0 42 20" fill="none">
+                <line x1="2" y1="10" x2="34" y2="10" stroke="#3E3A39" stroke-width="3" stroke-linecap="round"/>
+                <path d="M28 4L38 10L28 16" fill="#F6D27A" stroke="#3E3A39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="flight-station" style="text-align: right;">
+              <div class="flight-time">12:30</div>
+              <div class="flight-airport">日本成田機場抵達</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 回程 -->
+        <div class="flight-card">
+          <span class="flight-code">FD235</span>
+          <span class="flight-tag" style="background-color: var(--aqua);">回程｜12/05（六）</span>
+          <div class="flight-route">
+            <div class="flight-station">
+              <div class="flight-time">13:30</div>
+              <div class="flight-airport">日本成田機場起飛</div>
+            </div>
+            <div class="flight-arrow" aria-hidden="true">
+              <svg width="42" height="20" viewBox="0 0 42 20" fill="none">
+                <line x1="2" y1="10" x2="34" y2="10" stroke="#3E3A39" stroke-width="3" stroke-linecap="round"/>
+                <path d="M28 4L38 10L28 16" fill="#B9DAA5" stroke="#3E3A39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="flight-station" style="text-align: right;">
+              <div class="flight-time">17:00</div>
+              <div class="flight-airport">高雄小港機場抵達</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 住宿資訊 -->
+      <div class="hotel-box">
+        <div class="hotel-info">
+          <span class="badge" style="background-color: var(--coral); margin-bottom: 6px;">連住 4 晚基地</span>
+          <h3>🏨 飯店：HOTEL APERTO</h3>
+          <p style="font-size: 0.9rem; color: var(--ink-muted);">位於山手線生活圈，前往池袋 1 站、新宿與東京車站皆可直達</p>
+        </div>
+        <div>
+          <span class="hotel-station-pill">🚉 最近車站：JR 大塚站（Otsuka）</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 每日行程（上方日期切換，下方時間軸） -->
+    <section id="itinerary" class="card">
+      <div class="section-header">
+        <span class="section-icon" style="background-color: var(--yellow);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="5" width="18" height="16" rx="3" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5"/>
+            <line x1="3" y1="10" x2="21" y2="10" stroke="#3E3A39" stroke-width="2.5"/>
+            <line x1="8" y1="3" x2="8" y2="7" stroke="#3E3A39" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="16" y1="3" x2="16" y2="7" stroke="#3E3A39" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <h2 class="section-title">🗓️ 每日行程時間軸</h2>
+      </div>
+
+      <!-- 上方日期切換按鈕 -->
+      <div class="day-tabs" role="tablist" aria-label="每日行程切換">
+        <button class="day-tab active" role="tab" aria-selected="true" data-day="1">
+          <span class="tab-dnum">Day 1</span>
+          <span class="tab-date">12/01 (二)</span>
+        </button>
+        <button class="day-tab" role="tab" aria-selected="false" data-day="2">
+          <span class="tab-dnum">Day 2</span>
+          <span class="tab-date">12/02 (三)</span>
+        </button>
+        <button class="day-tab" role="tab" aria-selected="false" data-day="3">
+          <span class="tab-dnum">Day 3</span>
+          <span class="tab-date">12/03 (四)</span>
+        </button>
+        <button class="day-tab" role="tab" aria-selected="false" data-day="4">
+          <span class="tab-dnum">Day 4</span>
+          <span class="tab-date">12/04 (五)</span>
+        </button>
+        <button class="day-tab" role="tab" aria-selected="false" data-day="5">
+          <span class="tab-dnum">Day 5</span>
+          <span class="tab-date">12/05 (六)</span>
+        </button>
+      </div>
+
+      <!-- ==================== DAY 1 ==================== -->
+      <div class="day-panel active" id="day-panel-1" role="tabpanel">
+        <div class="day-banner" style="background-color: var(--coral-light);">
+          <div class="day-banner-text">
+            <h3>Day 1｜12/01（二）抵達東京・吉伊卡哇樂園（選填）</h3>
+            <p>主題：抵達東京、入住飯店，視體力安排吉伊卡哇樂園。</p>
+          </div>
+          <!-- Day 1 插圖：Skyliner 與吉伊卡哇風可愛耳朵角色 -->
+          <div class="day-banner-svg" aria-hidden="true">
+            <svg viewBox="0 0 110 80" fill="none">
+              <rect x="6" y="46" width="98" height="22" rx="8" fill="#A8D3E6" stroke="#3E3A39" stroke-width="2.5" class="anim-train"/>
+              <rect x="16" y="52" width="16" height="8" rx="2" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2"/>
+              <rect x="38" y="52" width="16" height="8" rx="2" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2"/>
+              <circle cx="78" cy="28" r="14" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5" class="anim-float"/>
+              <circle cx="69" cy="15" r="5" fill="#F2A497" stroke="#3E3A39" stroke-width="2.5" class="anim-float"/>
+              <circle cx="87" cy="15" r="5" fill="#F2A497" stroke="#3E3A39" stroke-width="2.5" class="anim-float"/>
+              <circle cx="74" cy="27" r="1.8" fill="#3E3A39"/>
+              <circle cx="82" cy="27" r="1.8" fill="#3E3A39"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">12:30</span>
+              <span class="badge badge-transport">✈️ FD234</span>
+            </div>
+            <div class="tl-title">抵達成田機場</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">12:30–14:30</span>
+            </div>
+            <div class="tl-title">入境、領取行李、交通準備</div>
+            <div class="tl-desc">兌換/購買京成 Skyliner 車票，準備 IC 卡。</div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">14:30–16:00</span>
+              <span class="badge badge-must">★ 必去入住</span>
+            </div>
+            <div class="tl-title">前往大塚站、飯店寄放行李或入住</div>
+            <div class="tl-desc">入住 HOTEL APERTO（JR 大塚站）。</div>
+            <div class="tl-tags">
+              <span class="badge badge-transport">🚆 京成 Skyliner（成田→日暮里 36–40分）</span>
+              <span class="badge badge-jr">🚃 JR 山手線（日暮里→大塚 10分）</span>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">16:30 之後</span>
+              <span class="badge badge-opt">✨ 選填行程</span>
+            </div>
+            <div class="tl-title">吉伊卡哇樂園（池袋 Sunshine City Annex）</div>
+            <div class="tl-desc">視當天入境與搭車體力決定，若太累可直接取消不硬排。</div>
+            <div class="tl-tags">
+              <span class="badge badge-jr">🚃 JR 山手線（大塚↔池袋 單程約 ¥155）</span>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">晚上</span>
+            </div>
+            <div class="tl-title">池袋簡單逛街、吃晚餐，或回飯店休息</div>
+          </div>
+        </div>
+
+        <div class="sub-box aqua">
+          <h4>🚆 交通方式與票價（成田機場 → 日暮里站 → 大塚站）</h4>
+          <ul class="sub-list">
+            <li><strong>京成 Skyliner（成田機場 → 日暮里站）</strong>：原價單程 ¥2,580｜線上優惠單程約 ¥2,310｜車程約 36–40 分鐘</li>
+            <li><strong>JR 山手線（日暮里站 → 大塚站）</strong>：IC 卡單程約 ¥199｜車程約 10 分鐘</li>
+            <li><strong>單程交通費合計</strong>：約 ¥2,509–¥2,779</li>
+            <li>🔗 Skyliner 優惠票官方資訊：<a href="https://www.keisei.co.jp/keisei/tetudou/skyliner/us/tickets/coupon.php" target="_blank" rel="noopener">點此查看京成電鐵官網</a></li>
+          </ul>
+        </div>
+
+        <div class="sub-box coral">
+          <h4>🎀 吉伊卡哇樂園注意事項（重要實地提醒）</h4>
+          <ul class="sub-list">
+            <li><strong>地點與特殊入口動線</strong>：池袋 Sunshine City Annex（B1F・1F）。<strong>注意：無法從地面 1 樓直接進入</strong>，需從「Nitori 宜得利池袋 Sunshine 60 通店」旁的「Sunshine City 地下道入口」下至 B1F 入場。</li>
+            <li><strong>營業時間與預約制</strong>：10:00–19:00（<strong>最晚入場 17:40</strong>），採事前預約指定時段制，場內以無現金支付（信用卡/電子支付）為主。</li>
+            <li>第一天抵達時間可能受到入境、交通影響，建議選擇 16:30–17:30 之間的入場時段。</li>
+            <li>如果時間不合適或當天太累，就直接取消，不需要硬排（或改逛陽光城內的常設店 Chiikawa Land）。</li>
+            <li>若前往吉伊卡哇樂園：大塚站 ↔ 池袋站搭乘 JR 山手線，IC 卡單程約 ¥155，來回約 ¥310。</li>
+            <li>🔗 官方網站：<a href="https://chiikawapark-tokyo.jp/en/" target="_blank" rel="noopener">https://chiikawapark-tokyo.jp/en/</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ==================== DAY 2（已與原 Day 3 對調：週三去橫濱避開週四摩天輪休園） ==================== -->
+      <div class="day-panel" id="day-panel-2" role="tabpanel">
+        <div class="day-banner" style="background-color: var(--aqua-light);">
+          <div class="day-banner-text">
+            <h3>Day 2｜12/02（三）橫濱港未來・寶可夢中心・紅磚倉庫聖誕市集</h3>
+            <p>主題：寶可夢中心、港未來商圈、Cosmo World 摩天輪、紅磚倉庫聖誕市集、橫濱夜景。（✨ 排在星期三可避開星期四 Cosmo World 例行休園！）</p>
+          </div>
+          <!-- Day 2 插圖：精靈球與橫濱摩天輪 -->
+          <div class="day-banner-svg" aria-hidden="true">
+            <svg viewBox="0 0 110 80" fill="none">
+              <g class="anim-float" transform="translate(26, 40)">
+                <circle cx="0" cy="0" r="18" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5"/>
+                <path d="M-18 0 A18 18 0 0 1 18 0 Z" fill="#F2A497" stroke="#3E3A39" stroke-width="2.5"/>
+                <line x1="-18" y1="0" x2="18" y2="0" stroke="#3E3A39" stroke-width="2.5"/>
+                <circle cx="0" cy="0" r="5" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5"/>
+              </g>
+              <g transform="translate(76, 36)">
+                <circle cx="0" cy="0" r="20" fill="#F6D27A" stroke="#3E3A39" stroke-width="2.5" class="anim-wheel"/>
+                <circle cx="0" cy="0" r="11" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2"/>
+                <path d="M-10 28 L0 0 L10 28" stroke="#3E3A39" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">08:30（或 09:30）</span>
+            </div>
+            <div class="tl-title">從大塚站出發</div>
+            <div class="tl-desc">💡 提醒：橫濱 Sky Building 8F 寶可夢中心為 10:30 開門，若想一開門直接進場可 09:30 再從大塚出發；若 08:30 出發可先在橫濱站吃早餐。</div>
+            <div class="tl-tags">
+              <span class="badge badge-jr">🚃 JR 山手線（大塚→池袋）</span>
+              <span class="badge badge-transport">🚆 JR 湘南新宿線（池袋→橫濱 45–55分｜約 ¥715）</span>
+            </div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">09:30–11:00（10:30 開門）</span>
+              <span class="badge badge-must">★ 必去景點</span>
+            </div>
+            <div class="tl-title">抵達橫濱站、逛寶可夢中心（Sky Building 8F）</div>
+            <div class="tl-desc">位於橫濱站旁，先逛寶可夢中心（同層樓也有 Chiikawa Land 橫濱店），建議停留 1–1.5 小時。</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">11:00–12:00</span>
+            </div>
+            <div class="tl-title">午餐</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">12:00–13:00</span>
+              <span class="badge badge-transport">🚇 港未來線（橫濱→港未來 3分｜約 ¥193）</span>
+            </div>
+            <div class="tl-title">前往港未來區域</div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">13:00–15:00</span>
+              <span class="badge badge-must">★ 必去商圈</span>
+            </div>
+            <div class="tl-title">Landmark Plaza、Queen's Square</div>
+            <div class="tl-desc">港未來主要購物商場與餐廳空間。</div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">15:00–16:00</span>
+              <span class="badge badge-must">★ 必去地標</span>
+            </div>
+            <div class="tl-title">橫濱 Cosmo World、摩天輪周邊</div>
+            <div class="tl-desc">⚠️ 星期四 Cosmo World 可能休息（例行公休日為每週四），因此安排在星期三造訪！若行程改回星期四，務必事先查詢官網營業時間。</div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">16:00–18:00</span>
+              <span class="badge badge-must">★ 必去聖誕市集</span>
+            </div>
+            <div class="tl-title">紅磚倉庫、港灣散步 ＆ 2026 橫濱紅磚倉庫聖誕市集</div>
+            <div class="tl-desc">🎄 期間（2026/11/20～12/25）現場正好在舉辦「2026 橫濱紅磚倉庫聖誕市集」（16:00 點燈，主會場門票 ¥500～¥1,000，旁邊紅磚公園的「Christmas Village 寶可夢主題燈飾區」免費入場）！</div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">18:00 之後</span>
+              <span class="badge badge-must">★ 必看夜景</span>
+            </div>
+            <div class="tl-title">欣賞橫濱夜景、晚餐</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">晚上</span>
+            </div>
+            <div class="tl-title">返回大塚飯店</div>
+            <div class="tl-tags">
+              <span class="badge badge-transport">🚇 港未來線（港未來→橫濱 約 ¥193）</span>
+              <span class="badge badge-jr">🚆 JR 湘南新宿線＋山手線（橫濱→池袋→大塚 約 ¥715）</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-box yellow">
+          <h4>🌟 橫濱必逛景點指南</h4>
+          <div class="spot-grid">
+            <div class="spot-card">
+              <h5>⚡ 寶可夢中心橫濱 <span class="badge badge-must">必去</span></h5>
+              <p>地點：橫濱 Sky Building 8 樓（10:30 營業，同層還有吉伊卡哇專賣店）。位於橫濱站旁，建議先逛，避免購物後拿著戰利品走太久。建議停留約 1–1.5 小時。</p>
+            </div>
+            <div class="spot-card">
+              <h5>🏬 Landmark Plaza & Queen's Square</h5>
+              <p>港未來主要代表性購物商場、餐廳及休閒購物空間。</p>
+            </div>
+            <div class="spot-card">
+              <h5>🎡 Cosmo World（週四可能休園）</h5>
+              <p>大摩天輪及遊樂設施。注意：星期四 Cosmo World 可能休息，若要改回星期四（12/03），務必事先查詢營業時間！</p>
+            </div>
+            <div class="spot-card">
+              <h5>🎄 橫濱紅磚倉庫聖誕市集 <span class="badge badge-must">必去</span></h5>
+              <p>2026/11/20～12/25 舉辦「2026 橫濱紅磚倉庫聖誕市集」（16:00 點燈，主會場門票 ¥500～¥1,000，旁邊紅磚公園的「Christmas Village 寶可夢主題燈飾區」免費入場）。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-box aqua">
+          <h4>🚆 交通方式與防踩雷提醒（當日估算：約 ¥1,816）</h4>
+          <ul class="sub-list">
+            <li><strong>⚠️ 星期四 Cosmo World 休息提醒</strong>：Cosmo World 摩天輪常規公休日為<strong>星期四</strong>，因此將橫濱排在 12/02（三）。<strong>若臨時要改回星期四（12/03），請務必事先上官網查詢營業日曆與營業時間</strong>。</li>
+            <li><strong>🎄 2026 橫濱紅磚倉庫聖誕市集（2026/11/20～12/25）</strong>：現場正好舉辦盛大聖誕市集，<strong>16:00 點燈</strong>，主會場門票 <strong>¥500～¥1,000</strong>，旁邊紅磚公園的<strong>「Christmas Village 寶可夢主題燈飾區」免費入場</strong>！</li>
+            <li><strong>⚠️ 寶可夢中心開門時間（10:30 營業）</strong>：橫濱 Sky Building 8F 的「寶可夢中心橫濱」與同層樓「Chiikawa Land 橫濱店」皆為 10:30–20:30 營業。</li>
+            <li><strong>去程＆回程</strong>：JR 山手線（大塚↔池袋）＋ JR 湘南新宿線（池袋↔橫濱），單程約 ¥715；港未來線（橫濱↔港未來）單程約 ¥193。</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ==================== DAY 3（已與原 Day 2 對調：週四賞銀杏與逛新宿） ==================== -->
+      <div class="day-panel" id="day-panel-3" role="tabpanel">
+        <div class="day-banner" style="background-color: var(--yellow-light);">
+          <div class="day-banner-text">
+            <h3>Day 3｜12/03（四）明治神宮外苑銀杏大道・新宿購物</h3>
+            <p>主題：欣賞銀杏、逛新宿，不安排吉伊卡哇樂園，讓行程更輕鬆。</p>
+          </div>
+          <!-- Day 3 插圖：黃金銀杏葉與購物袋 -->
+          <div class="day-banner-svg" aria-hidden="true">
+            <svg viewBox="0 0 110 80" fill="none">
+              <g class="anim-sway">
+                <path d="M22 52 C14 36 24 18 40 22 C44 30 39 36 46 32 C54 38 48 54 32 52 Z" fill="#F6D27A" stroke="#3E3A39" stroke-width="2.5" stroke-linejoin="round"/>
+                <line x1="30" y1="50" x2="22" y2="66" stroke="#3E3A39" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+              <g class="anim-float">
+                <rect x="62" y="28" width="32" height="36" rx="4" fill="#F2A497" stroke="#3E3A39" stroke-width="2.5"/>
+                <path d="M70 28 V20 C70 15 86 15 86 20 V28" stroke="#3E3A39" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="78" cy="46" r="6" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">09:00</span>
+            </div>
+            <div class="tl-title">從大塚站出發</div>
+            <div class="tl-tags">
+              <span class="badge badge-jr">🚃 JR 山手線（大塚→代代木）</span>
+              <span class="badge badge-bus">🚃 JR 中央・總武線（代代木→信濃町）</span>
+              <span class="badge badge-opt">IC 卡約 ¥209</span>
+            </div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">10:00–11:30</span>
+              <span class="badge badge-must">★ 必去景點</span>
+            </div>
+            <div class="tl-title">明治神宮外苑銀杏大道</div>
+            <div class="tl-desc">漫步金黃銀杏林蔭大道，拍照打卡季節限定美景。</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">12:00–13:00</span>
+            </div>
+            <div class="tl-title">午餐</div>
+            <div class="tl-tags">
+              <span class="badge badge-bus">🚃 JR 中央・總武線（信濃町→新宿 約 ¥155）</span>
+            </div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">13:30–17:30</span>
+              <span class="badge badge-must">★ 必去重點</span>
+            </div>
+            <div class="tl-title">新宿逛街、購物</div>
+            <div class="tl-desc">購物時間可彈性調整，輕鬆逛不趕場。</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">18:00 之後</span>
+            </div>
+            <div class="tl-title">新宿晚餐、自由活動</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">晚上</span>
+            </div>
+            <div class="tl-title">返回大塚飯店</div>
+            <div class="tl-tags">
+              <span class="badge badge-jr">🚃 JR 山手線（新宿→大塚 約 ¥209）</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-box aqua">
+          <h4>🚆 交通方式與票價（當日估算：約 ¥573）</h4>
+          <ul class="sub-list">
+            <li><strong>去程（大塚站 → 代代木站 → 信濃町站）</strong>：JR 山手線（大塚 → 代代木）轉 JR 中央・總武線（代代木 → 信濃町），IC 卡單程約 ¥209</li>
+            <li><strong>銀杏大道 → 新宿站</strong>：JR 中央・總武線（信濃町 → 新宿），IC 卡單程約 ¥155</li>
+            <li><strong>回程（新宿站 → 大塚站）</strong>：JR 山手線，IC 卡單程約 ¥209</li>
+          </ul>
+        </div>
+
+        <div class="sub-box yellow">
+          <h4>🍂 注意事項</h4>
+          <ul class="sub-list">
+            <li>12 月初銀杏是否仍然漂亮，需要依當年天氣及落葉情況確認。</li>
+            <li>建議出發前一週查看銀杏見頃情報。</li>
+            <li>新宿購物時間可以彈性調整，不需要把每間店都排進去。</li>
+            <li>💡 若因天氣考量想將此日與橫濱（12/02）對調回星期四去橫濱，請務必先查詢橫濱 Cosmo World 星期四是否休園。</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ==================== DAY 4 ==================== -->
+      <div class="day-panel" id="day-panel-4" role="tabpanel">
+        <div class="day-banner" style="background-color: var(--green-light);">
+          <div class="day-banner-text">
+            <h3>Day 4｜12/04（五）富士山 KKday 一日遊・東京聖誕市集（選填）</h3>
+            <p>主題：富士山經典景點一日遊，晚上視體力決定是否去聖誕市集。</p>
+          </div>
+          <!-- Day 4 插圖：富士山與聖誕樹 -->
+          <div class="day-banner-svg" aria-hidden="true">
+            <svg viewBox="0 0 110 80" fill="none">
+              <path d="M8 66 L32 22 L52 22 L76 66 Z" fill="#A8D3E6" stroke="#3E3A39" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M32 22 L52 22 L59 35 L48 32 L42 38 L36 32 L25 35 Z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2" stroke-linejoin="round"/>
+              <g class="anim-sway" transform="translate(72, 18)">
+                <path d="M16 8 L4 26 H12 L2 42 H30 L20 26 H28 Z" fill="#B9DAA5" stroke="#3E3A39" stroke-width="2.5" stroke-linejoin="round"/>
+                <rect x="13" y="42" width="6" height="8" fill="#F2A497" stroke="#3E3A39" stroke-width="2"/>
+                <circle cx="16" cy="6" r="3.5" fill="#F6D27A" stroke="#3E3A39" stroke-width="2"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">06:30</span>
+            </div>
+            <div class="tl-title">從大塚出發</div>
+            <div class="tl-tags">
+              <span class="badge badge-jr">🚃 JR 山手線（大塚→東京 往上野/東京方向｜約 22分｜¥253）</span>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">07:15</span>
+            </div>
+            <div class="tl-title">抵達東京車站（請認明「丸之內南口」方向）</div>
+            <div class="tl-desc">山手線下車後，跟隨黃色指標往「丸の内南口（Marunouchi South Exit）」直行出站，切勿走去八重洲口！出站對面即有 KITTE 大樓與 Lawson 可買早餐。</div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">08:00</span>
+              <span class="badge badge-must">★ 準時集合</span>
+            </div>
+            <div class="tl-title">東京車站「丸之內南口」站外玻璃電梯前廣場集合</div>
+            <div class="tl-desc">定位：Marunouchi South Exit Police Box（丸之內南口交番旁、紅磚車站屋簷外「透明玻璃電梯井」正前方紅圈廣場）。</div>
+            <div class="tl-tags">
+              <span class="badge badge-bus">🚌 KKday 富士山一日遊專車</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Marunouchi+South+Exit+Police+Box+Tokyo+Station" target="_blank" rel="noopener" class="badge badge-opt" style="text-decoration: none;">📍 開啟 Google 地圖導航</a>
+            </div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">10:30</span>
+              <span class="badge badge-must">★ 必去絕景</span>
+            </div>
+            <div class="tl-title">新倉山淺間公園（約 1 小時）</div>
+            <div class="tl-desc">五重塔與富士山同框的世界級經典畫面。</div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">11:45</span>
+              <span class="badge badge-must">★ 必去打卡</span>
+            </div>
+            <div class="tl-title">日川時計店（約 20 分鐘）</div>
+            <div class="tl-desc">感受昭和時期浪漫天梯小鎮，盡頭就是富士山。</div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">12:30</span>
+              <span class="badge badge-must">★ 必去湧泉</span>
+            </div>
+            <div class="tl-title">忍野八海（約 1 小時）</div>
+            <div class="tl-desc">品嚐甘甜清泉與豐富道地小吃（烤糯米糰子、豆腐料理等）或簡單午餐。</div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">14:30</span>
+              <span class="badge badge-must">★ 必去打卡</span>
+            </div>
+            <div class="tl-title">河口湖 Lawson 羅森便利商店（約 20 分鐘）</div>
+            <div class="tl-desc">富士山與便利商店同框經典畫面。</div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">15:20</span>
+              <span class="badge badge-must">★ 必去湖景</span>
+            </div>
+            <div class="tl-title">河口湖大石公園（約 50 分鐘）</div>
+            <div class="tl-desc">飽覽河口湖與富士山全景，可逛自然生活館、品嚐特色薰衣草冰淇淋。</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">16:20</span>
+            </div>
+            <div class="tl-title">開始返回東京</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">18:50</span>
+              <span class="badge badge-opt">✨ 晚上選填</span>
+            </div>
+            <div class="tl-title">預計抵達東京車站 / 銀座 或 芝公園聖誕市集（選填）</div>
+            <div class="tl-desc">12/04–12/25 增設東京都芝公園第 4 號地（御成門站前廣場）下車點。視體力決定停留 60–90 分鐘或直接回大塚休息。</div>
+            <div class="tl-tags">
+              <span class="badge badge-jr">🚃 東京站回大塚：JR 山手線 約 ¥253</span>
+              <span class="badge badge-transport">🚇 御成門回大塚：都營三田線→巢鴨轉山手線 約 ¥375–400</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-box aqua">
+          <h4>📍 KKday 集合點圖解防迷路攻略：【東京站丸之內南口】</h4>
+          <p style="font-size: 0.88rem; color: var(--ink-muted); margin-bottom: 10px;">
+            英文定位：<strong>Marunouchi South Exit Police Box Tokyo Station</strong>（〒100-0005 東京都千代田區丸之內 1-9-1）
+          </p>
+
+          <!-- 手繪繪本風：東京站紅磚大樓＋透明玻璃電梯＋紅圈集合地插圖 -->
+          <div style="background-color: var(--bg-washi); border: 2.5px solid var(--ink); border-radius: var(--radius-sm); padding: 10px; margin-bottom: 12px;">
+            <svg viewBox="0 0 460 155" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto; display:block;">
+              <!-- 天空底 -->
+              <rect x="4" y="4" width="452" height="147" rx="10" fill="#E6F3F8" stroke="#3E3A39" stroke-width="2.5"/>
+              <!-- 復古紅磚東京車站建築 -->
+              <rect x="28" y="38" width="280" height="78" fill="#F2A497" stroke="#3E3A39" stroke-width="2.5"/>
+              <!-- 古典八角圓頂塔樓 -->
+              <path d="M220 38 L235 14 L275 14 L290 38 Z" fill="#3E3A39" stroke="#3E3A39" stroke-width="2.5" stroke-linejoin="round"/>
+              <!-- 窗戶群 -->
+              <rect x="48" y="50" width="18" height="22" rx="2" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2"/>
+              <rect x="80" y="50" width="18" height="22" rx="2" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2"/>
+              <rect x="112" y="50" width="18" height="22" rx="2" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2"/>
+              <rect x="144" y="50" width="18" height="22" rx="2" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2"/>
+              <rect x="176" y="50" width="18" height="22" rx="2" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2"/>
+              <rect x="242" y="48" width="26" height="24" rx="2" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2"/>
+              <!-- 丸之內南口大屋簷 -->
+              <path d="M18 86 L216 86 L206 96 L18 96 Z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5"/>
+              <!-- 對面 KITTE 大樓示意 -->
+              <rect x="348" y="24" width="92" height="92" rx="4" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5"/>
+              <text x="394" y="46" text-anchor="middle" fill="#3E3A39" font-size="11" font-weight="bold">對面 KITTE</text>
+              <rect x="364" y="56" width="60" height="16" rx="3" fill="#A8D3E6" stroke="#3E3A39" stroke-width="2"/>
+              <text x="394" y="68" text-anchor="middle" fill="#3E3A39" font-size="9" font-weight="bold">LAWSON</text>
+              <!-- 地面廣場 -->
+              <rect x="4" y="114" width="452" height="37" rx="6" fill="#F7F2E7" stroke="#3E3A39" stroke-width="2.5"/>
+              <!-- 透明玻璃電梯井（關鍵地標！） -->
+              <rect x="155" y="78" width="38" height="40" rx="3" fill="#A8D3E6" stroke="#3E3A39" stroke-width="2.5"/>
+              <line x1="174" y1="78" x2="174" y2="118" stroke="#3E3A39" stroke-width="2"/>
+              <line x1="155" y1="98" x2="193" y2="98" stroke="#3E3A39" stroke-width="2"/>
+              <!-- 紅色圓形集合區 MEETING POINT -->
+              <ellipse cx="174" cy="128" rx="62" ry="14" fill="#F2A497" stroke="#3E3A39" stroke-width="2.5"/>
+              <text x="174" y="132" text-anchor="middle" fill="#3E3A39" font-size="11" font-weight="bold">★ 集合地 MEETING POINT</text>
+              <!-- 指示箭頭 -->
+              <g class="anim-float">
+                <rect x="122" y="14" width="104" height="22" rx="11" fill="#F6D27A" stroke="#3E3A39" stroke-width="2.5"/>
+                <text x="174" y="29" text-anchor="middle" fill="#3E3A39" font-size="11" font-weight="bold">⬇ 玻璃電梯正前方</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="spot-grid" style="margin-bottom: 10px;">
+            <div class="spot-card">
+              <h5>① 站內通道認明「丸の内南口」 <span class="badge badge-jr">Step 1</span></h5>
+              <p>從大塚搭山手線抵達東京站（第 5 月台）後，建議從<strong>月台南側（偏車頭・往有樂町方向）</strong>下樓，沿黃色指標「<strong>↑ 丸の内南口方面</strong>」直走（通道旁有一排綠色置物櫃）。千萬別走去八重洲口！</p>
+            </div>
+            <div class="spot-card">
+              <h5>② 出改札口，穿過圓頂大廳 <span class="badge badge-transport">Step 2</span></h5>
+              <p>刷 IC 卡出「JR 丸の内南口」驗票閘門，抬頭可見綠色「<strong>↑ JR 丸の内南口</strong>」招牌與八角古典圓頂，順著正前方出口走出站外。</p>
+            </div>
+            <div class="spot-card">
+              <h5>③ 找「紅磚站房＋透明玻璃電梯」 <span class="badge badge-must">Step 3</span></h5>
+              <p>走出站外人行道廣場，背對復古紅磚車站大樓，找到屋簷外的<strong>「透明玻璃方形電梯井」</strong>，電梯正前方廣場（丸之內南口交番旁）即為集合點！</p>
+            </div>
+            <div class="spot-card">
+              <h5>🍙 07:15 抵達後的早餐＆洗手間補給</h5>
+              <p>集合點正對面馬路就是白色大樓 <strong>KITTE Marunouchi</strong>（B1 與 1F 附近有 Lawson 便利商店），建議先在站內上完洗手間、買好早餐飲水再去集合。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-box yellow">
+          <h4>🗻 富士山行程注意事項</h4>
+          <ul class="sub-list">
+            <li>早上集合時間為 08:00，建議提早抵達東京站丸之內南口。</li>
+            <li>冬季山區氣溫較低，需準備保暖防風衣物；建議穿好走、防滑的鞋子。</li>
+            <li>富士山能見度受天氣影響，無法保證一定看得到完整山景。</li>
+            <li>來回若都從東京站出發及返回：JR 山手線 ¥253 × 2 = 約 ¥506（KKday 團費另計）。</li>
+          </ul>
+        </div>
+
+        <div class="sub-box coral">
+          <h4>🎄 晚上選填：東京聖誕市集（芝公園）重要確認事項</h4>
+          <ul class="sub-list">
+            <li><strong>出發前一定要向 KKday 確認</strong>：① 是否可選擇在芝公園下車不回東京站、② 下車後是否可直接結束行程、③ 聖誕市集當天營業時間、門票及入場規定。</li>
+            <li>若從御成門站回大塚：搭乘都營三田線（御成門 → 巢鴨）轉 JR 山手線（巢鴨 → 大塚），交通費預留約 ¥375–¥400。</li>
+            <li>🔗 官方網站：<a href="https://tokyochristmas.net/zh-hant/shiba/" target="_blank" rel="noopener">https://tokyochristmas.net/zh-hant/shiba/</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ==================== DAY 5 ==================== -->
+      <div class="day-panel" id="day-panel-5" role="tabpanel">
+        <div class="day-banner" style="background-color: var(--coral-light);">
+          <div class="day-banner-text">
+            <h3>Day 5｜12/05（六）返台</h3>
+            <p>主題：退房、前往成田機場，帶著滿滿戰利品平安返家。</p>
+          </div>
+          <!-- Day 5 插圖：行李箱與返航飛機 -->
+          <div class="day-banner-svg" aria-hidden="true">
+            <svg viewBox="0 0 110 80" fill="none">
+              <rect x="18" y="26" width="30" height="40" rx="6" fill="#F6D27A" stroke="#3E3A39" stroke-width="2.5"/>
+              <path d="M27 26 V18 H39 V26" stroke="#3E3A39" stroke-width="2.5"/>
+              <circle cx="24" cy="69" r="3" fill="#3E3A39"/>
+              <circle cx="42" cy="69" r="3" fill="#3E3A39"/>
+              <g class="anim-float" transform="translate(54, 22)">
+                <path d="M2 20 L44 8 C49 7 52 12 48 16 L32 23 L22 34 L16 34 L20 24 L8 25 Z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5" stroke-linejoin="round"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">08:00</span>
+            </div>
+            <div class="tl-title">起床、整理行李、退房</div>
+            <div class="tl-desc">退房前再次確認護照、錢包、手機、行動電源及所有戰利品。</div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">08:30</span>
+              <span class="badge badge-must">★ 準時出發</span>
+            </div>
+            <div class="tl-title">從大塚站出發前往成田機場</div>
+            <div class="tl-tags">
+              <span class="badge badge-jr">🚃 JR 山手線（大塚→日暮里 約 10分｜¥199）</span>
+              <span class="badge badge-transport">🚆 京成 Skyliner（日暮里→成田機場 約 36–40分）</span>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">09:30–10:00</span>
+            </div>
+            <div class="tl-title">預計抵達成田機場</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">10:00–12:00</span>
+            </div>
+            <div class="tl-title">報到、托運、出境及候機</div>
+          </div>
+
+          <div class="tl-item must-go">
+            <div class="tl-top">
+              <span class="tl-time">13:30</span>
+              <span class="badge badge-must">✈️ FD235 起飛</span>
+            </div>
+            <div class="tl-title">成田機場起飛返台</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-top">
+              <span class="tl-time">17:00</span>
+            </div>
+            <div class="tl-title">抵達高雄小港機場 🏠</div>
+          </div>
+        </div>
+
+        <div class="sub-box aqua">
+          <h4>🚆 交通方式與注意事項（單程約 ¥2,509–¥2,779）</h4>
+          <ul class="sub-list">
+            <li>建議至少提前 3 小時抵達機場。</li>
+            <li><strong>JR 山手線（大塚 → 日暮里）</strong>：IC 卡單程約 ¥199（約 10 分鐘）。</li>
+            <li><strong>京成 Skyliner（日暮里 → 成田機場）</strong>：全車指定席，原價 ¥2,580｜線上優惠約 ¥2,310（約 36–40 分鐘）。</li>
+            <li>Skyliner 官方優惠來回票成人約 ¥4,500，若去回程都搭乘，可考慮購買優惠來回票。</li>
+            <li>🔗 Skyliner 官方資訊：<a href="https://www.keisei.co.jp/keisei/tetudou/skyliner/us/tickets/coupon.php" target="_blank" rel="noopener">點此查看京成電鐵官網</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 交通費總整理 -->
+    <section id="budget" class="card">
+      <div class="section-header">
+        <span class="section-icon" style="background-color: var(--green);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect x="2" y="5" width="20" height="14" rx="3" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5"/>
+            <circle cx="12" cy="12" r="3.5" fill="#F6D27A" stroke="#3E3A39" stroke-width="2"/>
+          </svg>
+        </span>
+        <h2 class="section-title">💰 交通費總整理（每位成人估算）</h2>
+      </div>
+
+      <div class="fare-table-wrap">
+        <table class="fare-table">
+          <thead>
+            <tr>
+              <th>日期</th>
+              <th>交通項目</th>
+              <th>預估費用</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>12/01</strong></td>
+              <td>成田 → 日暮里 Skyliner ＋ 日暮里 → 大塚 JR</td>
+              <td>¥2,509–2,779</td>
+            </tr>
+            <tr>
+              <td><strong>12/02</strong></td>
+              <td>大塚 ↔ 橫濱 ＋ 橫濱 ↔ 港未來</td>
+              <td>約 ¥1,816</td>
+            </tr>
+            <tr>
+              <td><strong>12/03</strong></td>
+              <td>大塚 → 信濃町 → 新宿 → 大塚</td>
+              <td>約 ¥573</td>
+            </tr>
+            <tr>
+              <td><strong>12/04</strong></td>
+              <td>大塚 ↔ 東京站</td>
+              <td>約 ¥506</td>
+            </tr>
+            <tr>
+              <td><strong>12/05</strong></td>
+              <td>大塚 → 日暮里 JR ＋ 日暮里 → 成田 Skyliner</td>
+              <td>¥2,509–2,779</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="fare-totals">
+        <div class="fare-pill-card" style="background-color: var(--green-light);">
+          <span>🌟 Skyliner 優惠來回票（¥4,500）</span>
+          <span class="price">約 ¥7,793</span>
+        </div>
+        <div class="fare-pill-card" style="background-color: var(--yellow-light);">
+          <span>🎫 Skyliner 優惠單程票</span>
+          <span class="price">約 ¥7,913</span>
+        </div>
+        <div class="fare-pill-card" style="background-color: var(--coral-light);">
+          <span>🎟️ Skyliner 原價單程票</span>
+          <span class="price">約 ¥8,453</span>
+        </div>
+      </div>
+
+      <div class="sub-box yellow" style="margin-top: 0;">
+        <h4>📌 選填行程額外預算 ＆ 未含項目</h4>
+        <ul class="sub-list">
+          <li><strong>12/01 吉伊卡哇樂園</strong>：大塚 ↔ 池袋，約 ¥310。</li>
+          <li><strong>12/04 芝公園聖誕市集</strong>：若從御成門搭車回大塚，約 ¥375–¥400。</li>
+          <li><strong>其他費用不包含</strong>：KKday 富士山一日遊團費、吉伊卡哇樂園門票、Cosmo World 摩天輪門票、聖誕市集門票、餐飲、購物及其他消費。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 出發前清單 ＆ 可打勾的待辦清單 -->
+    <section id="todo-pre" class="card">
+      <div class="section-header">
+        <span class="section-icon" style="background-color: var(--coral);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="3" width="16" height="18" rx="3" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5"/>
+            <path d="M8 10L11 13L16 8" stroke="#3E3A39" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="8" y1="16" x2="16" y2="16" stroke="#3E3A39" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <h2 class="section-title">✅ 出發前確認清單 ＆ 旅程待辦</h2>
+      </div>
+
+      <div class="checklist-progress">
+        <span>完成進度</span>
+        <div class="progress-bar-outer">
+          <div class="progress-bar-inner" id="todo-progress-bar"></div>
+        </div>
+        <span id="todo-progress-text">0 / 0</span>
+      </div>
+
+      <span class="check-group-title" style="background-color: var(--coral);">📌 出發前待確認事項</span>
+      <div class="check-list" id="pre-trip-list">
+        <label class="check-item"><input type="checkbox" data-key="pre-1"><span class="check-text">吉伊卡哇樂園 12/01 是否有合適的入場時段（事先確認官方門票）</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pre-2"><span class="check-text">出發前一週查看「明治神宮外苑銀杏大道」實際觀賞與見頃狀況</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pre-3"><span class="check-text">確認寶可夢中心橫濱（Sky Building 8F）營業時間及當期活動資訊</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pre-4"><span class="check-text">確認橫濱 Cosmo World 摩天輪營業時間（星期四可能休息，若改回 12/03 週四務必先查營業時間）</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pre-5"><span class="check-text">向 KKday 確認 12/04 是否可在芝公園下車並直接結束行程</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pre-6"><span class="check-text">確認東京聖誕市集（芝公園）12/04 的營業時間、門票及入場規定</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pre-7"><span class="check-text">購買京成 Skyliner 優惠來回票（約 ¥4,500）及確認去回程班次</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pre-8"><span class="check-text">確認大塚站 HOTEL APERTO 入住與退房時間</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pre-9"><span class="check-text">完成 Visit Japan Web 線上入境與海關申報登錄（截圖 QR Code）</span></label>
+      </div>
+
+      <span class="check-group-title" style="background-color: var(--aqua);">🗓️ 五天四夜重點行程打卡待辦</span>
+      <div class="check-list" id="trip-todo-list">
+        <label class="check-item"><input type="checkbox" data-key="todo-1"><span class="check-text">【12/01】成田機場兌換 Skyliner 車票、入住大塚 HOTEL APERTO、池袋晚餐（吉伊卡哇樂園選填）</span></label>
+        <label class="check-item"><input type="checkbox" data-key="todo-2"><span class="check-text">【12/02】橫濱 Sky Building 8F 寶可夢中心採買、港未來商圈、Cosmo World 摩天輪、2026 橫濱紅磚倉庫聖誕市集（含寶可夢免費燈飾區）與夜景</span></label>
+        <label class="check-item"><input type="checkbox" data-key="todo-3"><span class="check-text">【12/03】明治神宮外苑銀杏大道散步拍照、新宿輕鬆逛街購物</span></label>
+        <label class="check-item"><input type="checkbox" data-key="todo-4"><span class="check-text">【12/04】08:00 東京站「丸之內南口」紅磚站房外透明玻璃電梯前集合（淺間公園、日川時計店、忍野八海、Lawson、大石公園）</span></label>
+        <label class="check-item"><input type="checkbox" data-key="todo-5"><span class="check-text">【12/05】08:30 大塚站出發搭 Skyliner 前往成田機場，搭 FD235 平安返台</span></label>
+      </div>
+
+      <div class="check-add-row">
+        <input type="text" id="new-todo-input" class="check-input" placeholder="新增自訂待辦事項..." />
+        <button type="button" class="btn-cute" id="add-todo-btn">＋ 新增</button>
+      </div>
+    </section>
+
+    <!-- 行李清單 -->
+    <section id="packing" class="card">
+      <div class="section-header">
+        <span class="section-icon" style="background-color: var(--aqua);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect x="6" y="6" width="12" height="15" rx="3" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5"/>
+            <path d="M9 6V3H15V6" stroke="#3E3A39" stroke-width="2.5"/>
+            <line x1="9" y1="11" x2="15" y2="11" stroke="#3E3A39" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <h2 class="section-title">🧳 12 月東京＆富士山行李清單</h2>
+      </div>
+
+      <div class="checklist-progress">
+        <span>打包進度</span>
+        <div class="progress-bar-outer">
+          <div class="progress-bar-inner" id="pack-progress-bar"></div>
+        </div>
+        <span id="pack-progress-text">0 / 0</span>
+      </div>
+
+      <span class="check-group-title" style="background-color: var(--yellow);">🪪 隨身重要證件＆票券</span>
+      <div class="check-list" id="pack-list-1">
+        <label class="check-item"><input type="checkbox" data-key="pk-1"><span class="check-text">護照（確認效期 6 個月以上）＆ 身分證</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pk-2"><span class="check-text">電子機票（FD234 / FD235）、飯店住宿憑證、KKday 憑證</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pk-3"><span class="check-text">日幣現金 ＆ 海外高回饋信用卡（2 張以上）</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pk-4"><span class="check-text">交通 IC 卡（Suica / PASMO實體卡或手機 Apple Pay 西瓜卡）</span></label>
+      </div>
+
+      <span class="check-group-title" style="background-color: var(--green);">🧥 12 月冬季保暖衣物（含富士山防寒）</span>
+      <div class="check-list" id="pack-list-2">
+        <label class="check-item"><input type="checkbox" data-key="pk-5"><span class="check-text">防風保暖外套 / 羽絨外套（富士山河口湖氣溫較低必備）</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pk-6"><span class="check-text">發熱衣、保暖毛衣、洋蔥式穿搭衣物（電車與室內有暖氣）</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pk-7"><span class="check-text">好走、防滑的鞋子（新倉山淺間公園階梯與橫濱散步必備）</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pk-8"><span class="check-text">圍巾、手套、毛帽、暖暖包</span></label>
+      </div>
+
+      <span class="check-group-title" style="background-color: var(--coral);">🔌 3C 電器＆生活常備品</span>
+      <div class="check-list" id="pack-list-3">
+        <label class="check-item"><input type="checkbox" data-key="pk-9"><span class="check-text">手機、行動電源（務必放隨身行李，不可托運）、充電線</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pk-10"><span class="check-text">日本網卡 / eSIM / 漫遊開通確認</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pk-11"><span class="check-text">個人常備藥品（感冒藥、止痛藥、腸胃藥、OK繃）</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pk-12"><span class="check-text">保濕乳液、護唇膏、護手霜（日本冬季乾燥）</span></label>
+        <label class="check-item"><input type="checkbox" data-key="pk-13"><span class="check-text">大容量摺疊購物袋（裝寶可夢中心與吉伊卡哇戰利品！）</span></label>
+      </div>
+
+      <div class="check-add-row">
+        <input type="text" id="new-pack-input" class="check-input" placeholder="新增自訂行李物品..." />
+        <button type="button" class="btn-cute" id="add-pack-btn">＋ 新增</button>
+      </div>
+    </section>
+
+    <footer class="footer-note">
+      <div>
+        <button type="button" class="btn-cute" id="toggle-motion-btn" style="background-color: var(--bg-card);">
+          ✨ 切換「減少動態效果」模式
+        </button>
+        <button type="button" class="btn-cute" id="reset-checks-btn" style="background-color: var(--coral-light); margin-left: 6px;">
+          🔄 重置所有勾選
+        </button>
+      </div>
+      <p>🇯🇵 東京五天四夜自由行手冊｜祝旅途平安愉快、富士山大景清晰可見！</p>
+    </footer>
+
+  </main>
+
+  <script>
+    // 1. 出發倒數計時器（目標：2026/12/01 08:05 高雄小港起飛 GMT+8）
+    const targetDate = new Date('2026-12-01T08:05:00+08:00').getTime();
+    const endTripDate = new Date('2026-12-05T17:00:00+08:00').getTime();
+
+    function updateCountdown() {
+      const now = Date.now();
+      const diff = targetDate - now;
+
+      const elDays = document.getElementById('cd-days');
+      const elHours = document.getElementById('cd-hours');
+      const elMins = document.getElementById('cd-mins');
+      const elSecs = document.getElementById('cd-secs');
+      const elStatus = document.getElementById('cd-status');
+
+      if (diff <= 0) {
+        elDays.textContent = '0';
+        elHours.textContent = '0';
+        elMins.textContent = '0';
+        elSecs.textContent = '0';
+        if (now < endTripDate) {
+          elStatus.textContent = '🎉 旅途進行中！祝在東京每一天都開心順利！';
+        } else {
+          elStatus.textContent = '🌸 旅程圓滿結束！珍藏美好的東京與富士山回憶！';
+        }
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      elDays.textContent = String(days);
+      elHours.textContent = String(hours).padStart(2, '0');
+      elMins.textContent = String(mins).padStart(2, '0');
+      elSecs.textContent = String(secs).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // 2. 每日行程切換 Tabs（含彈跳動畫）
+    const dayTabs = document.querySelectorAll('.day-tab');
+    const dayPanels = document.querySelectorAll('.day-panel');
+
+    dayTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const day = tab.getAttribute('data-day');
+        dayTabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        dayPanels.forEach(p => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        const activePanel = document.getElementById('day-panel-' + day);
+        if (activePanel) {
+          activePanel.classList.add('active');
+        }
+      });
+    });
+
+    // 3. 頂端選單點擊高亮
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+
+    // 4. 可打勾清單狀態儲存與進度計算
+    const STORAGE_KEY = 'tokyo_trip_2026_checks_v1';
+    const CUSTOM_TODO_KEY = 'tokyo_trip_2026_custom_todo_v1';
+    const CUSTOM_PACK_KEY = 'tokyo_trip_2026_custom_pack_v1';
+
+    function loadSavedChecks() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      } catch (e) {
+        return {};
+      }
+    }
+
+    function saveCheckState(key, checked) {
+      const state = loadSavedChecks();
+      state[key] = checked;
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (e) {}
+    }
+
+    function bindCheckboxEvents(container) {
+      const checkboxes = container.querySelectorAll('input[type="checkbox"]');
+      const state = loadSavedChecks();
+      checkboxes.forEach(cb => {
+        const key = cb.getAttribute('data-key');
+        if (key && state[key]) {
+          cb.checked = true;
+          cb.closest('.check-item').classList.add('checked');
+        }
+        cb.onchange = () => {
+          const item = cb.closest('.check-item');
+          if (cb.checked) {
+            item.classList.add('checked');
+          } else {
+            item.classList.remove('checked');
+          }
+          if (key) saveCheckState(key, cb.checked);
+          updateProgressBars();
+        };
+      });
+    }
+
+    function updateProgressBars() {
+      // 待辦進度
+      const todoSection = document.getElementById('todo-pre');
+      const todoCbs = todoSection.querySelectorAll('input[type="checkbox"]');
+      const todoChecked = todoSection.querySelectorAll('input[type="checkbox"]:checked');
+      const todoPct = todoCbs.length ? Math.round((todoChecked.length / todoCbs.length) * 100) : 0;
+      document.getElementById('todo-progress-bar').style.width = todoPct + '%';
+      document.getElementById('todo-progress-text').textContent = `${todoChecked.length} / ${todoCbs.length}`;
+
+      // 行李進度
+      const packSection = document.getElementById('packing');
+      const packCbs = packSection.querySelectorAll('input[type="checkbox"]');
+      const packChecked = packSection.querySelectorAll('input[type="checkbox"]:checked');
+      const packPct = packCbs.length ? Math.round((packChecked.length / packCbs.length) * 100) : 0;
+      document.getElementById('pack-progress-bar').style.width = packPct + '%';
+      document.getElementById('pack-progress-text').textContent = `${packChecked.length} / ${packCbs.length}`;
+    }
+
+    function createCustomCheckItem(text, key, listEl) {
+      const label = document.createElement('label');
+      label.className = 'check-item';
+      const input = document.createElement('input');
+      input.type = 'checkbox';
+      input.setAttribute('data-key', key);
+      const span = document.createElement('span');
+      span.className = 'check-text';
+      span.textContent = text;
+      label.appendChild(input);
+      label.appendChild(span);
+      listEl.appendChild(label);
+      bindCheckboxEvents(listEl);
+      updateProgressBars();
+    }
+
+    function loadCustomItems(storageKey, listEl, prefix) {
+      try {
+        const items = JSON.parse(localStorage.getItem(storageKey) || '[]');
+        items.forEach((text, idx) => {
+          createCustomCheckItem(text, `${prefix}-custom-${idx}`, listEl);
+        });
+      } catch (e) {}
+    }
+
+    function addCustomItem(inputId, storageKey, listId, prefix) {
+      const inputEl = document.getElementById(inputId);
+      const text = inputEl.value.trim();
+      if (!text) return;
+      const listEl = document.getElementById(listId);
+      let items = [];
+      try {
+        items = JSON.parse(localStorage.getItem(storageKey) || '[]');
+      } catch (e) {}
+      const idx = items.length;
+      items.push(text);
+      try {
+        localStorage.setItem(storageKey, JSON.stringify(items));
+      } catch (e) {}
+      createCustomCheckItem(text, `${prefix}-custom-${idx}`, listEl);
+      inputEl.value = '';
+    }
+
+    bindCheckboxEvents(document);
+    loadCustomItems(CUSTOM_TODO_KEY, document.getElementById('trip-todo-list'), 'todo');
+    loadCustomItems(CUSTOM_PACK_KEY, document.getElementById('pack-list-3'), 'pack');
+    updateProgressBars();
+
+    document.getElementById('add-todo-btn').addEventListener('click', () => {
+      addCustomItem('new-todo-input', CUSTOM_TODO_KEY, 'trip-todo-list', 'todo');
+    });
+    document.getElementById('new-todo-input').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') addCustomItem('new-todo-input', CUSTOM_TODO_KEY, 'trip-todo-list', 'todo');
+    });
+
+    document.getElementById('add-pack-btn').addEventListener('click', () => {
+      addCustomItem('new-pack-input', CUSTOM_PACK_KEY, 'pack-list-3', 'pack');
+    });
+    document.getElementById('new-pack-input').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') addCustomItem('new-pack-input', CUSTOM_PACK_KEY, 'pack-list-3', 'pack');
+    });
+
+    // 重置所有勾選
+    document.getElementById('reset-checks-btn').addEventListener('click', () => {
+      localStorage.removeItem(STORAGE_KEY);
+      document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.checked = false;
+        cb.closest('.check-item').classList.remove('checked');
+      });
+      updateProgressBars();
+    });
+
+    // 5. 支援「減少動態效果」設定與手動切換
+    const toggleMotionBtn = document.getElementById('toggle-motion-btn');
+    const mediaReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    function syncMotionButtonText() {
+      const isReduced = document.body.classList.contains('reduce-motion') || mediaReduced.matches;
+      toggleMotionBtn.textContent = isReduced
+        ? '🐢 目前為「減少動態效果」（點此開啟繪本動畫）'
+        : '✨ 切換「減少動態效果」模式';
+    }
+
+    if (mediaReduced.matches) {
+      document.body.classList.add('reduce-motion');
+    }
+    syncMotionButtonText();
+
+    toggleMotionBtn.addEventListener('click', () => {
+      document.body.classList.toggle('reduce-motion');
+      syncMotionButtonText();
+    });
+  </script>
+</body>
+</html>
